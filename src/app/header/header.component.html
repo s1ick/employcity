@@ -1,0 +1,27 @@
+<section class="header">
+  <div class="layout">
+    <a class="header__banner header-banner" routerLink="buisness">
+      LoremIpsum.<span>Net</span>
+    </a>
+    <div class="header__mobile-btns">
+      <mat-icon (click)="toggleMenu()">
+        {{ toggle ? 'more_horiz' : 'more_vert'}}
+      </mat-icon>
+    </div>
+    <ul
+    [class.open]="toggle"
+    class="header__menu header-menu">
+      <ng-container [ngTemplateOutlet]="headerMenu" [ngTemplateOutletContext]="{text: 'Бизнес', link: 'buisness'}"></ng-container>
+      <ng-container [ngTemplateOutlet]="headerMenu" [ngTemplateOutletContext]="{text: 'О НАС', link: 'about'}"></ng-container>
+      <ng-container [ngTemplateOutlet]="headerMenu" [ngTemplateOutletContext]="{text: 'Цены', link: 'price'}"></ng-container>
+      <ng-container [ngTemplateOutlet]="headerMenu" [ngTemplateOutletContext]="{text: 'Оформить заказ', link: 'order'}"></ng-container>
+    </ul>
+
+  </div>
+</section>
+
+<ng-template #headerMenu let-text="text" let-link="link">
+  <li class="header-menu__item header-menu-item">
+    <a routerLinkActive="active" routerLink="{{link}}" class="header-menu-item__link" href="#">{{text}}</a>
+  </li>
+</ng-template>

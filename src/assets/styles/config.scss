@@ -1,0 +1,44 @@
+//colors
+$dark: #272733;
+$blue: #42a9ed;
+$lightBlue: #3e9cdc;
+$darkBlue: #286690;
+$blueHover: #43abf0;
+$black: #000;
+$white: #fff;
+$gray: #bbbbbb;
+$lightGray: #c3c3c3;
+$darkBg: #3d4050;
+
+.transitionDefault {
+    -webkit-transition: all 0.2s 0s ease-in-out;
+    -moz-transition: all 0.2s 0s ease-in-out;
+    -o-transition: all 0.2s 0s ease-in-out;
+    transition: all 0.2s 0s ease-in-out;
+}
+
+//secondary pages
+.host-secondary-page {
+    background: $dark;
+    display: flex;
+    padding-top: 150px;
+    justify-content: center;
+  }
+  .title {
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 43px;
+      color: $white;
+      margin-bottom: 30px;
+      text-align: center;
+      text-transform: uppercase;
+  
+      span {
+        color: $lightBlue;
+      }
+  }
+  .text {
+    color: $white;
+    line-height: 28px;
+    font-size: 18px;
+  }

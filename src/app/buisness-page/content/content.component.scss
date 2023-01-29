@@ -1,0 +1,136 @@
+@import '/src/assets/styles/config.scss';
+//
+$assetPath : "../../../assets/images";
+.content {
+  background: $dark url("#{$assetPath}/bg-form.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 120px;
+  padding-bottom: 150px;
+
+  &__sub-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $gray;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    color: $white;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      color: $lightBlue;
+    }
+  }
+}
+
+.content-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 1172px;
+  margin-bottom: 20px;
+}
+
+.content-list-item {
+  width: 209px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  z-index: 1;
+
+  &:last-of-type {
+    .content-list-item__image {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__image {
+    background: $lightBlue;
+    border: 5px solid $darkBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    &:hover {
+      img {
+        @extend .transitionDefault;
+        transform: scale(1.5);
+      }
+    }
+
+    &::after {
+      content: "";
+      background-image: url("#{$assetPath}/listdots.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: calc(100% - 280px);
+      top: 48px;
+      width: 110px;
+      height: 6px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white;
+    padding: 0 8px;
+  }
+}
+
+.perfect-scrollbar {
+  max-width: 1172px
+}
+
+@media (max-width: 532px) {
+  .content {
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    &__title {
+      font-size: 24px;
+      line-height: 36px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    &__sub-title {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .content {
+
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}

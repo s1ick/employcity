@@ -1,0 +1,21 @@
+::ng-deep {
+.mat-mdc-slider.mat-primary {
+    --mdc-slider-handle-color: #42A9ED;
+    --mdc-slider-focus-handle-color: #42A9ED;
+    --mdc-slider-hover-handle-color: #42A9ED;
+    --mdc-slider-active-track-color: rgba(255, 255, 255, 0.7);
+    --mdc-slider-inactive-track-color: rgba(255, 255, 255, 0.7);
+    --mdc-slider-with-tick-marks-active-container-color: #fff;
+    --mdc-slider-with-tick-marks-inactive-container-color: #3f51b5;
+    --mat-mdc-slider-hover-ripple-color: rgba(66, 169, 237, 0.05);
+    --mat-mdc-slider-focus-ripple-color: rgba(66, 169, 237, 0.1);
+  }
+  .mdc-slider {
+    height: 37px;
+  }
+  .mat-mdc-slider .mdc-slider__thumb-knob {
+    width: var(--mdc-slider-handle-width, 24px) !important;
+    height: var(--mdc-slider-handle-height, 24px) !important;
+    border: 3px solid $darkBlue !important;
+  }
+}

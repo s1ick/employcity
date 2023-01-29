@@ -1,0 +1,47 @@
+
+  <section class="form">
+    <div class="form__left-side form-ls">
+      <div class="form-ls__wrapper-inputs">
+        <ng-select
+          [clearable]="false"
+          [items]="simpleItems"
+          placeholder="Выберите тип системы"
+          [(ngModel)]="selectedSimpleItem"
+        >
+        </ng-select>
+        <mat-form-field>
+          <input name="email" matInput placeholder="Ваш e-mail"  />
+        </mat-form-field>
+      </div>
+      <div class="form-range-slide">
+        <div class="form-range-slide__value">
+          <div>Sed ut perspiciatis, unde omnis iste natus</div>
+          <span>{{ value }}</span>
+        </div>
+        <mat-slider
+          class="example-margin"
+          [disabled]="disabled"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [discrete]="thumbLabel"
+          [showTickMarks]="showTicks"
+        >
+          <input matSliderThumb [(ngModel)]="value" />
+        </mat-slider>
+      </div>
+    </div>
+
+    <div class="form__right-side form-rs">
+      <mat-form-field>
+        <input name="name" matInput placeholder="Ваше имя" />
+      </mat-form-field>
+
+      <input hidden="true" type="file" id="file-input" />
+      <label for="file-input" class="btn btn_white form-rs__upload">
+        <img src="assets/images/file.svg" alt="file" />
+        Прикрепить файл
+      </label>
+    </div>
+  </section>
+  <button class="btn btn_send" mat-flat-button>Отправить</button>

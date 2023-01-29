@@ -1,0 +1,52 @@
+::ng-deep {
+
+  .mdc-text-field {
+    border-bottom-right-radius: var(--mdc-shape-small, 4px) !important;
+    border-bottom-left-radius: var(--mdc-shape-small, 4px) !important;
+  }
+
+  .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark;
+    caret-color: $dark;
+
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: $dark;
+    }
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $dark;
+    }
+
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: $dark;
+    }
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: $dark;
+    }
+  }
+
+  .mat-mdc-form-field-infix {
+    min-height: auto;
+    height: 48px;
+  }
+
+  .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  input:-internal-autofill-selected {
+    background-color: transparent !important;
+  }
+  .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom: 0;
+}
+}

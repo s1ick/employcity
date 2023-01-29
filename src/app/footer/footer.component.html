@@ -1,0 +1,37 @@
+<section class="footer">
+  <div class="layout">
+    <div class="footer__copyright">
+      © 2018 «LoremIpsum.net» Все права защищены.
+    </div>
+    <span class="footer__vertical-line"></span>
+    <ul class="footer-list">
+      <ng-container [ngTemplateOutlet]="footerMenuPayment" [ngTemplateOutletContext]="{text: 'Qiwi wallet', img: 'qiwi', link: '#' , darkClass: 'footer-list-item-link_dark'}"></ng-container>
+      <ng-container [ngTemplateOutlet]="footerMenuPayment" [ngTemplateOutletContext]="{text: 'Yandex Money', img: 'yandex', link: '#' , darkClass: 'footer-list-item-link_dark'}"></ng-container>
+      <ng-container [ngTemplateOutlet]="footerMenuPayment" [ngTemplateOutletContext]="{text: 'Web Money', img: 'webmoney', link: '#' , darkClass: 'footer-list-item-link_dark'}"></ng-container>  
+    </ul>
+    <span class="footer__vertical-line"></span>
+    <ul class="footer-list">
+      <ng-container [ngTemplateOutlet]="footerMenuLink" [ngTemplateOutletContext]="{text: 'info@ipsum228.com', img: 'mail2', link: 'mailto:info@ipsum228.com'}"></ng-container>
+      <ng-container [ngTemplateOutlet]="footerMenuLink" [ngTemplateOutletContext]="{text: 'Мы вконтакте', img: 'vk', link: '#'}"></ng-container>
+    </ul>
+  </div>
+</section>
+
+
+<ng-template #footerMenuPayment let-link="link" let-text="text" let-darkClass="darkClass" let-img="img">
+  <li class="footer-list-item">
+    <div class="footer-list-item-link {{darkClass}}">
+      <img src="{{ imgPath }}/{{img}}.svg" alt="{{img}}" />
+      <span>{{text}}</span>
+    </div>
+  </li>
+</ng-template>
+
+<ng-template #footerMenuLink let-link="link" let-text="text" let-img="img">
+  <li class="footer-list-item">
+    <a class="footer-list-item-link" href="{{link}}">
+      <img src="{{ imgPath }}/{{img}}.svg" alt="{{img}}" />
+      <span>{{text}}</span>
+    </a>
+  </li>
+</ng-template>

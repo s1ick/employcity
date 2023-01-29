@@ -1,0 +1,8 @@
+@import '/src/assets/styles/config.scss';
+:host {
+    @extend .host-secondary-page;
+}
+.price {
+    min-height: calc(100vh - 230px);
+    padding-bottom: 40px;
+}

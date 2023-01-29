@@ -1,0 +1,53 @@
+<div class="content">
+  <div class="layout">
+    <h2 class="content__title">Оформление <span>Заказа</span></h2>
+    <div class="content__sub-title">
+      Перед заполнением формы ознакомьтесь с нашей схемой работы!
+    </div>
+    <perfect-scrollbar class="perfect-scrollbar" [config]="{
+        useBothWheelAxes: true,
+        suppressScrollX: false,
+        suppressScrollY: false
+      }">
+      <div class="content__list content-list">
+        <ng-container [ngTemplateOutlet]="listItem" [ngTemplateOutletContext]="{
+            img: 'search',
+            text: 'Lorem ipsum dolor sit amet'
+          }">
+        </ng-container>
+
+        <ng-container [ngTemplateOutlet]="listItem" [ngTemplateOutletContext]="{
+            img: 'percent',
+            text: 'Сonsecteturadipiscing elit'
+          }">
+        </ng-container>
+        <ng-container [ngTemplateOutlet]="listItem" [ngTemplateOutletContext]="{
+          img: 'docs',
+          text: 'Sed do eiusmod tempor'
+        }">
+      </ng-container>
+        <ng-container [ngTemplateOutlet]="listItem" [ngTemplateOutletContext]="{
+            img: 'mail',
+            text: 'Esse cillum dolore eu fugiat'
+          }">
+        </ng-container>
+        <ng-container [ngTemplateOutlet]="listItem" [ngTemplateOutletContext]="{
+            img: 'dollar',
+            text: 'Excepteur sint occaecat cupidatat non proident'
+          }">
+        </ng-container>
+      </div>
+    </perfect-scrollbar>
+    <app-form></app-form>
+  </div>
+</div>
+
+<ng-template #listItem let-img="img" let-text="text">
+  <div class="content-list__item content-list-item">
+    <div class="content-list-item__image">
+      <img src="{{ imgPath }}/{{ img }}.svg" alt="{{ img }}" />
+      <div class="content-list-dots"></div>
+    </div>
+    <span class="content-list-item__text">{{ text }}</span>
+  </div>
+</ng-template>
