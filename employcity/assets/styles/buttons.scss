@@ -1,0 +1,33 @@
+::ng-deep {
+    button.mdc-button {
+        &.btn {
+        background: $lightBlue;
+        border: 1px solid $white;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        padding: 0 10px;
+        text-transform: uppercase;
+        height: 43px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        color: $white;
+        &_white {
+          background: $white !important;
+          border: 1px solid #6F6D7B !important;
+          color: #2A2B30 !important;
+      }
+      }
+        &:last-of-type {
+          margin-right: 0;
+        }
+        img {
+          margin-right: 10px;
+        }
+      
+      }
+      
+}
